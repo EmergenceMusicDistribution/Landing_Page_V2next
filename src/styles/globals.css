@@ -22,3 +22,17 @@ a.active{
 .nav-link a{
   font-size: large;
 }
+
+
+.hero-image {
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* .hero-image.loading {
+  opacity: 0;
+} */
+
+.hero-image.loaded {
+  opacity: 1;
+}

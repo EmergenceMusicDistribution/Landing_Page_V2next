@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import localImg from '../images/bg.png'
 
 const HeroSection = () => {
+
+  const [isLoading, setLoading] = useState(true);
   return (
     <div style={{background:'linear-gradient(90deg, #382d50, #3a2d50 57%, #7a2e44)'}} className="flex sm:flex-col items-center md:flex-col px-20  pt-5 sm:px-2 text-white sm:gap-4 md:gap-4 bg-slate-950">
 
@@ -50,9 +52,11 @@ const HeroSection = () => {
       // height={1000}
       alt="Hero Image"
       sizes="(max-width: 768px) 100vw, 33vw"
-      quality={100}
-      // priority={true}
-      loading="lazy"
+      quality={90}
+      priority={true}
+      onLoadingComplete={() => setLoading(false)}
+      className={`hero-image ${isLoading ? 'loading' : 'loaded'}`}
+      // loading="lazy"
       // placeholder="blur"
       // style={{objectFit: "fill"}}
     />
