@@ -65,7 +65,7 @@ const services = () => {
       <link rel="canonical" href="https://emergencemusicdistributionlandingpagev2.vercel.app/services" />
     </Head>
     
-        <div style={{background:'linear-gradient(90deg, #231517, #121213 49%, #1e1925)'}} className=' px-28 md:px-10 sm:px-0 py-10'>
+        <div style={{background:'linear-gradient(90deg, #231517, #121213 49%, #1e1925)'}} className='px-28 md:px-10 sm:px-0 py-10'>
             
             <h1 className='uppercase sm:px-5 font-bold text-white text-lg'>Welcome to emergence music distribution services.</h1>
             
