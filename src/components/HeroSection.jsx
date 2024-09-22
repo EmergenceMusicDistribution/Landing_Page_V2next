@@ -23,14 +23,14 @@ const HeroSection = () => {
 
 <div className='space-y-5 sm:text-center md:text-center md:pb-10'>
     <div>
-        <h3 className='uppercase text-pink-500 font-bold text-2xl'>new Artist</h3>
+        <Link href={'/new-artist'} className='uppercase text-pink-500 font-bold text-2xl'>new Artist</Link>
         {/* <h2 className='uppercase text-pink-500 font-bold text-2xl'>{t('newArtist')}</h2> */}
 
         <p className='text-xl'>PLEASE REQUEST A MUSIC EVALUATION.</p>
     </div>
 
     <div className='space-y-1'>
-        <h3 className='uppercase text-teal-500  font-bold text-2xl'>EMD Artist</h3>
+        <Link href={'/emd-artist'} className='uppercase text-teal-500  font-bold text-2xl'>EMD Artist</Link>
         <p className='text-xl'>IF YOU HAVE A NEW RELEASE COMING SOON, PLEASE CONTACT US AT</p>
         <div className=' overflow-hidden break-all'>
         <a className='text-blue-500 hover:text-blue-600 uppercase text-xl' href="mailto:SUPPORT@EMERGENCEMUSICDISTRIBUTION.COM">support@emergencemusicdistribution.com</a>

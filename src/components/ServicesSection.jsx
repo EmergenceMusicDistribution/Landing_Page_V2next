@@ -28,7 +28,7 @@ const ServicesSection = () => {
 
     <h2 className="Capitalize text-4xl sm:text-2xl text-white font-bold text-center">
       <span className="">
-        Digital Artist Development <span className="text-pink-500">Services</span> 
+        Digital Artist Development <Link href={'/services'} className="text-pink-500">Services</Link> 
       </span>
     </h2>
 
