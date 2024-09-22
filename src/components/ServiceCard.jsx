@@ -10,12 +10,12 @@ export const ServiceCard = ({...props}) => {
                 src={props.image}
                 width={500}
                 height={500}
-                alt="Artist Image"
+                alt={`${props.title} image`}
                 style={{objectFit: "contain"}}
             />
           </div>
 
-          <h2 className='text-lg font-bold'>{props.title}</h2>
+          <h2 className='text-lg font-bold capitalize'>{props.title}</h2>
           <p className='text-[#b9b6b6]'>
           {props.description}
           {props.duration}
@@ -34,7 +34,7 @@ export const ServiceCard = ({...props}) => {
                 src={props.img}
                 width={500}
                 height={500}
-                alt="Service Image"
+                alt={`${props.title} image`}
                 quality={90}
                 priority={true}
                 style={{objectFit: "contain"}}

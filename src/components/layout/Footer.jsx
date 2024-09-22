@@ -67,7 +67,7 @@ const Footer = () => {
                 }
                 <div className='flex items-center gap-2'>
                     <input type="checkbox" className={`h-5 w-5`} name="" id="" />
-                    <p className='text-gray-400'>I would like to recieve emails from <span className='text-white font-bold'>Emergence</span></p>
+                    <p className='text-gray-400'>I would like to receive emails from <span className='text-white font-bold'>Emergence</span></p>
                 </div>
 
                 <button
