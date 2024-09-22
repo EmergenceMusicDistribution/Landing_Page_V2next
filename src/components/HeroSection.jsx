@@ -48,8 +48,6 @@ const HeroSection = () => {
 <div className='flex-1'>
 <Image
       src={localImg}
-      // width={1000}
-      // height={1000}
       alt="Hero Image"
       sizes="(max-width: 768px) 100vw, 33vw"
       quality={90}
