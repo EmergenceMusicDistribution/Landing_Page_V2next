@@ -6,8 +6,9 @@ import siteLogo from '../images/siteLogo.svg'
 import { useRouter } from 'next/router'
 
 
-const newArtist = () => {
+const NewArtist = () => {
   const router = useRouter()
+
     const onSubmit = (data) => {
         console.log('New Artist Data:', data);
       };
@@ -52,4 +53,4 @@ const newArtist = () => {
   )
 }
 
-export default newArtist
+export default NewArtist

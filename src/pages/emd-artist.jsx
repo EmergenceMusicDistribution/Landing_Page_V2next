@@ -5,7 +5,7 @@ import Link from 'next/link';
 import siteLogo from '../images/siteLogo.svg'
 import { useRouter } from 'next/router'
 
-const emdArtist = () => {
+const EmdArtist = () => {
   const router = useRouter()
     const onSubmit = (data) => {
         console.log('Emd Artist Data:', data);
@@ -48,4 +48,4 @@ const emdArtist = () => {
   )
 }
 
-export default emdArtist
+export default EmdArtist
