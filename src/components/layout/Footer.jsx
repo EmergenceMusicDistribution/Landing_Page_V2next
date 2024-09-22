@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { GiCheckMark } from 'react-icons/gi'
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
-import siteLogo from '../../images/siteLogo.svg'
+import siteLogo from '../../images/sitelogo.svg'
 import { useRouter } from 'next/router'
 
 const Footer = () => {

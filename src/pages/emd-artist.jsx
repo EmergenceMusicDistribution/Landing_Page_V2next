@@ -2,7 +2,7 @@ import { ReusableForm } from '@/components/Form';
 import { emdArtistSchema } from '@/schemas';
 import Image from 'next/image';
 import Link from 'next/link';
-import siteLogo from '../images/siteLogo.svg'
+import siteLogo from '../images/sitelogo.svg'
 import { useRouter } from 'next/router'
 
 const EmdArtist = () => {

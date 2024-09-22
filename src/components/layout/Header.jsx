@@ -1,7 +1,7 @@
 import { usePathname } from 'next/navigation';
 import NavLink from '../common/NavLink';
 import Image from 'next/image';
-import siteLogo from '../../images/siteLogo.svg'
+import siteLogo from '../../images/sitelogo.svg'
 import { useRouter } from 'next/router'
 
 
@@ -22,7 +22,7 @@ const Header = () => {
     //   fill={true}
     />
     </div>
-    
+
       <div className='nav-link text-gray-300 sm:hidden md:hidden uppercase space-x-7'>
       <NavLink href={'/'} >Home</NavLink>
         <NavLink href={'/services'} >Services</NavLink>
