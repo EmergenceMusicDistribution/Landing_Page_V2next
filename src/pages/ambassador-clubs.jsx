@@ -1,11 +1,22 @@
 import Head from "next/head"
-import { FaCheck, FaRegCheckCircle } from "react-icons/fa"
+import { FaCheck } from "react-icons/fa"
 import { clubs } from "../data/clubs"
 import Link from "next/link"
 import Image from "next/image"
 
 
 const ambassadorClubs = () => {
+
+  const clubsStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Emergence Music Distribution Ambassador Clubs",
+    "description": "Join our ambassador clubs to promote music distribution and earn rewards.",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Emergence Music Distribution"
+    }
+  };
     
       return (
         <>
@@ -16,6 +27,10 @@ const ambassadorClubs = () => {
                  improve their professional leaderships compared to international artists regardless of musical genres. They will learn how to generate income, 
                  get support for their artistic career development from Emergence Music Distribution, get career opportunities and receive prizes." />
       <link rel="canonical" href="https://emergencemusicdistributionlandingpagev2.vercel.app/ambassador-clubs" />
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(clubsStructuredData) }}
+        />
     </Head>
         
         <div style={{background:'linear-gradient(90deg, #231517, #121213 49%, #1e1925)'}}  className='px-20 sm:px-5 md:px-10 py-8 '>

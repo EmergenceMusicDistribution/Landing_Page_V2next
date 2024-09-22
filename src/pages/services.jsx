@@ -30,11 +30,11 @@ const services = () => {
 
       }, 
       {
-          title:'Subscription Base Single Promotion (Full Price 399.99$)',
+          title:'Subscription Base Single Promotion (Full Price $399.99)',
           img:'/images/single-promo-icon.svg', 
           pricing : {
               // prevPrice:'',
-              currentPrice:' 133.33$ USD / Monthly + tax'
+              currentPrice:' $133.33 USD / Monthly + tax'
           },
           duration:'90 days',
           list: [
@@ -55,6 +55,39 @@ const services = () => {
       }
   ]
 
+  const servicesStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Global Music Distribution",
+    "provider": {
+      "@type": "Organization",
+      "name": "Emergence Music Distribution"
+    },
+    "description": "We offer digital music distribution services to independent artists and labels all over the world.",
+"offers": {
+  "@type": "AggregateOffer",
+  "offerCount": "2",
+  "lowPrice": "133.33",
+  "highPrice": "299.99",
+  "priceCurrency": "USD",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Base Single Promotion",
+      "price": "299.99",
+      "priceCurrency": "USD",
+      "description": "Graphics Design, Marketing Campaign, Email Promotion"
+    },
+    {
+        "@type": "Offer",
+        "name": "Subscription Base Single Promotion(Full price $399.99)",
+        "price": "133.33",
+        "priceCurrency": "USD",
+        "description": "Graphics Design, Marketing Campaign, Email Promotion"
+      }
+  ]
+}
+  };
 
   return (
     
@@ -63,6 +96,10 @@ const services = () => {
       <title>Emergence Music Distribution: Services</title>
       <meta name="description" content="Emergence Music Distribution empowers artists by digitally branding them, By assisting them with all the tools to guide them to numerous revenue opportunities." />
       <link rel="canonical" href="https://emergencemusicdistributionlandingpagev2.vercel.app/services" />
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesStructuredData) }}
+        />
     </Head>
     
         <div style={{background:'linear-gradient(90deg, #231517, #121213 49%, #1e1925)'}} className='px-28 md:px-10 sm:px-0 py-10'>
