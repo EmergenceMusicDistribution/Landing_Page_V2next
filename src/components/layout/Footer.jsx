@@ -21,7 +21,7 @@ const Footer = () => {
     <div className={`bg-[#212121] py-4  ${pathname==='/new-artist' || pathname==='/emd-artist' ? 'hidden': ''}`}>
     <div className='flex justify-between flex-wrap px-32 md:px-10 sm:px-5 gap-5 md:gap-3 py-10 sm:py-1 md:py-5 text-white'>
         <div onClick={()=>navigate('/')} className=' md:w-full sm:m-auto pb-7'>
-            <Image src="/images/sitelogo.svg" width={300} height={300} alt="Emergence music logo" />
+            <Image src="/sitelogo.svg" width={300} height={300} alt="Emergence music logo" />
         </div>
 
 

@@ -10,7 +10,7 @@ const Header = () => {
     <div className=' cursor-pointer sm:pl-4 '>
     <Image
     className='sm-w-4/5'
-      src="/images/sitelogo.svg"
+      src="/sitelogo.svg"
       width={280}
       height={280}
       alt="emergence music logo"

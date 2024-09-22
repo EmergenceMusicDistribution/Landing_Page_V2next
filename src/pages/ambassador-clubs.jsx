@@ -1,3 +1,4 @@
+import Head from "next/head"
 import { FaCheck, FaRegCheckCircle } from "react-icons/fa"
 import { clubs } from "../data/clubs"
 import Link from "next/link"
@@ -7,6 +8,16 @@ import Image from "next/image"
 const ambassadorClubs = () => {
     
       return (
+        <>
+      <Head>
+      <title>Emergence Music Distribution: Ambassador Clubs</title>
+      <meta name="description" content="Emergence Music Distribution has created the EMERGENCE MUSIC AMBASSADOR CLUBS for artists who want to grow in the music industry, challenge themselves and perform better in a competitive environment.
+                 We believe this is crucial to professional digital artistic development, which is why we created a revolutionary structure where artists can sharpen their musical skills, their music marketing strategies, 
+                 improve their professional leaderships compared to international artists regardless of musical genres. They will learn how to generate income, 
+                 get support for their artistic career development from Emergence Music Distribution, get career opportunities and receive prizes." />
+      <link rel="canonical" href="https://emergencemusicdistributionlandingpagev2.vercel.app/ambassador-clubs" />
+    </Head>
+        
         <div style={{background:'linear-gradient(90deg, #231517, #121213 49%, #1e1925)'}}  className='px-20 sm:px-5 md:px-10 py-8 '>
     
             <h1 className='text-4xl font-bold text-center text-yellow-500'>Emergence Music Ambassador Clubs</h1>
@@ -84,6 +95,7 @@ const ambassadorClubs = () => {
           </Link>
 
         </div>
+        </>
           
       )
 }

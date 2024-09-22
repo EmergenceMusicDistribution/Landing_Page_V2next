@@ -15,16 +15,16 @@ const PlatformsSection = () => {
 
    <div className='flex items-center w-1/2 sm:w-full md:w-full m-auto sm:px-1 md:px-5 justify-center flex-wrap gap-4'>
         
-       <Image className='w-32' width={100} height={100} src="/images/platforms/apple.png" alt="" />
-       <Image className='w-32' width={100} height={100} src="/images/platforms/spotify.png" alt="" />
-       <Image className='w-32' width={100} height={100} src="/images/platforms/tiktok.png" alt="" />
-       <Image className='w-32' width={100} height={100} src="/images/platforms/youtube.png" alt="" />
-       <Image className='w-32' width={100} height={100} src="/images/platforms/boomplay.png" alt="" />
-       <Image className='w-32' width={100} height={100} src="/images/platforms/amazon.svg" alt="" />
-       <Image className='w-32' width={100} height={100} src="/images/platforms/anghami.svg" alt="" />
-       <Image className='w-32' width={100} height={100} src="/images/platforms/beatport.svg" alt="" />
-       <Image className='w-32' width={100} height={100} src="/images/platforms/resso.svg" alt="" />
-       <Image className='w-32' width={100} height={100} src="/images/platforms/digital.svg" alt="" />
+       <Image className='w-32' width={100} height={100} src="/images/platforms/apple.png" alt="apple distribution" />
+       <Image className='w-32' width={100} height={100} src="/images/platforms/spotify.png" alt="spotify distribution" />
+       <Image className='w-32' width={100} height={100} src="/images/platforms/tiktok.png" alt="tiktok distribution" />
+       <Image className='w-32' width={100} height={100} src="/images/platforms/youtube.png" alt="youtube distribution" />
+       <Image className='w-32' width={100} height={100} src="/images/platforms/boomplay.png" alt="boomplay distribution" />
+       <Image className='w-32' width={100} height={100} src="/images/platforms/amazon.svg" alt="amazon music distribution" />
+       <Image className='w-32' width={100} height={100} src="/images/platforms/anghami.svg" alt="aghami distribution" />
+       <Image className='w-32' width={100} height={100} src="/images/platforms/beatport.svg" alt="beatport distribution" />
+       <Image className='w-32' width={100} height={100} src="/images/platforms/resso.svg" alt="resso distribution" />
+       <Image className='w-32' width={100} height={100} src="/images/platforms/digital.svg" alt="digital distribution" />
    </div>
 
    </div>

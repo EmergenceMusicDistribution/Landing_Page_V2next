@@ -1,4 +1,4 @@
-
+import Head from 'next/head'
 import { Services } from '@/data/services'
 import { MiniServiceCard, ServiceCard } from '../components/ServiceCard'
 
@@ -58,6 +58,13 @@ const services = () => {
 
   return (
     
+    <>
+    <Head>
+      <title>Emergence Music Distribution: Services</title>
+      <meta name="description" content="Emergence Music Distribution empowers artists by digitally branding them, By assisting them with all the tools to guide them to numerous revenue opportunities." />
+      <link rel="canonical" href="https://emergencemusicdistributionlandingpagev2.vercel.app/services" />
+    </Head>
+    
         <div style={{background:'linear-gradient(90deg, #231517, #121213 49%, #1e1925)'}} className=' px-28 md:px-10 sm:px-0 py-10'>
             
             <h1 className='uppercase sm:px-5 font-bold text-white text-lg'>Welcome to emergence music distribution services.</h1>
@@ -99,6 +106,7 @@ const services = () => {
             </div>
             
                 </div>
+    </>
     
   )
 }
