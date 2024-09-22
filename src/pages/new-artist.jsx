@@ -41,7 +41,7 @@ const newArtist = () => {
 </div>
 
 <div className='bg-gradient-to-r from-[#35222d] to-[#3e2b47] md:hidden sm:hidden col-span-8 flex justify-center items-start' >
-<Image width={350} height={350}  className='mt-80 cursor-pointer' src="/images/sitelogo.svg" alt="Emergence music logo" />
+<Image width={350} height={350}  className='mt-80 cursor-pointer' src="/sitelogo.svg" alt="Emergence music logo" />
 </div>
 
     </div>
