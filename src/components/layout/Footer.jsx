@@ -3,9 +3,12 @@ import { useEffect, useState } from "react"
 import { GiCheckMark } from 'react-icons/gi'
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
+import siteLogo from '../../images/siteLogo.svg'
+import { useRouter } from 'next/router'
 
 const Footer = () => {
  const pathname = usePathname();
+ const router = useRouter()
  const [subScribeStatus, setSubscribeStatus] = useState("Subscribe")
  const [email, setEmail] = useState("")
  const [error, setError] = useState(false)
@@ -20,8 +23,8 @@ const Footer = () => {
   return (
     <div className={`bg-[#212121] py-4  ${pathname==='/new-artist' || pathname==='/emd-artist' ? 'hidden': ''}`}>
     <div className='flex justify-between flex-wrap px-32 md:px-10 sm:px-5 gap-5 md:gap-3 py-10 sm:py-1 md:py-5 text-white'>
-        <div onClick={()=>navigate('/')} className=' md:w-full sm:m-auto pb-7'>
-            <Image src="/sitelogo.svg" width={300} height={300} alt="Emergence music logo" />
+        <div onClick={()=>router.push('/')} className=' md:w-full sm:m-auto pb-7'>
+            <Image src={siteLogo} alt="Emergence music logo" />
         </div>
 
 

@@ -15,7 +15,7 @@ export const ReusableForm = ({ onSubmit, schema, fields }) => {
         <div className='' key={field.name}>
           <label className='text-gray-400'>{field.label}</label>
           <div className='space-y-1'>
-          <input className={`bg-[#1e1f26] w-full  border rounded-md py-3.5 px-2 text-white ${errors[field.name] && 'border border-red-500'}  `}{...register(field.name)} type={field.type} />
+          <input className={`bg-[#1e1f26] w-full appearance-none  border rounded-md py-3.5 px-2 text-white ${errors[field.name] && 'border border-red-500'}  `}{...register(field.name)} type={field.type} />
           {errors[field.name] && <p className='text-red-500 text-sm'>{errors[field.name]?.message}</p>}
           </div>
         </div>

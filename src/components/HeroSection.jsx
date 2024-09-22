@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import localImg from '../images/bg.png'
 
 const HeroSection = () => {
   return (
     <div style={{background:'linear-gradient(90deg, #382d50, #3a2d50 57%, #7a2e44)'}} className="flex sm:flex-col items-center md:flex-col px-20  pt-5 sm:px-2 text-white sm:gap-4 md:gap-4 bg-slate-950">
 
-    <div className='space-y-7'>
+    <div className='space-y-7 flex-1'>
     <h1 className='text-5xl sm:text-3xl font-bold uppercase sm:text-center md:text-center leading-snug'>
     Be Part Of The New Emergence Of <span className='text-yellow-500'>ARTISTS</span> 
     {/* {mainHeading.slice(0, -1).join(" ")} <span className='text-yellow-500'>{mainHeading[mainHeading.length - 1]}</span>  */}
@@ -42,13 +43,17 @@ const HeroSection = () => {
     {/* <img  className='w-1/2  md:w-full sm:w-full' src="/images/bg.png" alt="emergence music hero image" /> */}
 {/* </div> */}
 
-<div>
+<div className='flex-1'>
 <Image
-      src="/images/bg.png"
-    //   className='w-full'
-      width={1000}
-      height={1000}
-      alt="Artist Image"
+      src={localImg}
+      // width={1000}
+      // height={1000}
+      alt="Hero Image"
+      sizes="(max-width: 768px) 100vw, 33vw"
+      quality={100}
+      // priority={true}
+      loading="lazy"
+      // placeholder="blur"
       // style={{objectFit: "fill"}}
     />
 </div>

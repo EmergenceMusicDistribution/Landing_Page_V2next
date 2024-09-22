@@ -2,10 +2,11 @@ import { ReusableForm } from '@/components/Form';
 import { emdArtistSchema } from '@/schemas';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import siteLogo from '../images/siteLogo.svg'
+import { useRouter } from 'next/router'
 
 const emdArtist = () => {
-
+  const router = useRouter()
     const onSubmit = (data) => {
         console.log('Emd Artist Data:', data);
       };
@@ -37,8 +38,8 @@ const emdArtist = () => {
        
 </div>
 
-<div className='bg-gradient-to-r from-[#35222d] to-[#3e2b47] md:hidden sm:hidden col-span-8 flex justify-center items-start' >
-<Image width={350} height={350}  className='mt-80 cursor-pointer' src="/sitelogo.svg" alt="Emergence music logo" />
+<div onClick={()=>router.push('/')} className='bg-gradient-to-r from-[#35222d] to-[#3e2b47] md:hidden sm:hidden col-span-8 flex justify-center items-start' >
+<Image  className='mt-80 cursor-pointer' src={siteLogo} alt="Emergence music logo" />
 </div>
 
     </div>
