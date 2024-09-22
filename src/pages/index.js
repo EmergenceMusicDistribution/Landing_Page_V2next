@@ -23,7 +23,7 @@ export default function Home() {
     < >
     <Head>
       <title>Emergence Music Distribution: Top Music Distribution Company</title>
-      <meta name="description" content="Distribute your music to major streaming platforms like Spotify , Apple Music and more. Expand your audience and boost revenue with Emergence Music Distribution." />
+      <meta name="description" content="Distribute your music to major streaming platforms like Spotify & Apple Music. Expand your audience and boost revenue with Emergence Music Distribution." />
       <meta name="robots" content="index, follow" /> 
       <link rel="canonical" href="https://emergencemusicdistributionlandingpagev2.vercel.app" />
       <script
