@@ -77,7 +77,7 @@ const ambassadorClubs = () => {
 
                 </div>
                 <h2 className="font-bold text-lg">{club.title}</h2>
-                <h2 className="uppercase font-medium" >{club.subTitle}</h2>
+                <h2 className="uppercase text-sm font-semibold" >{club.subTitle}</h2>
                   <ul className="px-3">
                     {club.list.map((list,i)=>{
                      return (
