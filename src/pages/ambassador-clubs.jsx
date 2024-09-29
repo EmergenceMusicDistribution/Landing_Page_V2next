@@ -71,14 +71,14 @@ const ambassadorClubs = () => {
                     src={club.image}
                     width={100}
                     height={100}
-                    alt="Ambassador club"
+                    alt={`${club.title} image`}
                     style={{objectFit: "contain"}}
                     />
-                {/* <img className="w-1/2 m-auto" src={club.image} alt="" /> */}
+
                 </div>
                 <h2 className="font-bold text-lg">{club.title}</h2>
-                <h2 >{club.subTitle}</h2>
-                  <ul className="px-4">
+                <h2 className="uppercase text-sm font-semibold" >{club.subTitle}</h2>
+                  <ul className="px-3">
                     {club.list.map((list,i)=>{
                      return (
                        <li className=" flex items-center gap-2" key={i}>

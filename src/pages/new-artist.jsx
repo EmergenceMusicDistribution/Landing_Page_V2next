@@ -4,13 +4,42 @@ import Image from 'next/image';
 import Link from 'next/link';
 import siteLogo from '../images/sitelogo.svg'
 import { useRouter } from 'next/router'
+import axios from 'axios';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 
 const NewArtist = () => {
   const router = useRouter()
+  const [isLoading, setIsLoading] = useState(false)
 
     const onSubmit = (data) => {
-        console.log('New Artist Data:', data);
+
+      const postData = async()=>{
+        setIsLoading(true)
+          try {
+            const response = await fetch('/api/new-artist', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            })
+            const result = await response.json();
+
+            if (response.ok) {
+              // console.log('New artist created:', result)
+              setIsLoading(false)
+              window.location.href = 'https://calendly.com/emergencemusicdistribution/30min?month=2024-09';
+            } else {
+              toast.error(result.error)
+              setIsLoading(false)
+            }
+          } catch (error) {
+            setIsLoading(false)
+            toast.error("An unexpected Error Occured")
+            // Show error message
+          }
+        }
+        postData()
       };
 
       const fields = [
@@ -20,7 +49,7 @@ const NewArtist = () => {
         { name: 'dateOfBirth', label: 'Date of Birth', type: 'date' },
         { name: 'location', label: 'Location', type: 'text' },
         { name: 'email', label: 'Email', type: 'email' },
-        { name: 'phoneNumber', label: 'Phone Number', type: 'number' },
+        { name: 'phoneNumber', label: 'Phone Number', type: 'text' },
         { name: 'language', label: 'Language', type: 'text' },
         { name: 'artistName', label: 'Artist Name / Label Name / Music Group Name', type: 'text' },
         { name: 'musicGenre', label: 'Music Genre', type: 'text' },
@@ -38,13 +67,13 @@ const NewArtist = () => {
     <h3 className='text-lg text-white'>Please fill the form with your information!</h3>
 
     <div className='pb-8'>
-     <ReusableForm onSubmit={onSubmit} schema={newArtistSchema} fields={fields} />
+     <ReusableForm onSubmit={onSubmit} isLoading={isLoading} schema={newArtistSchema} fields={fields} />
    </div>
        
 </div>
 
 <div className='bg-gradient-to-r from-[#35222d] to-[#3e2b47] md:hidden sm:hidden col-span-8 flex justify-center items-start' >
-<Image onClick={()=>router.push('/')} className='mt-80 cursor-pointer' src={siteLogo} alt="Emergence music logo" />
+<Image onClick={()=>router.push('/')} className='mt-80 cursor-pointer' src={siteLogo}  alt="Emergence music logo" />
 </div>
 
     </div>

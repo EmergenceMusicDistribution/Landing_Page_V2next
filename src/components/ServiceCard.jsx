@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { useRouter } from "next/router"
 
-
 export const ServiceCard = ({...props}) => {
     return (
       <div style={{background:'hsla(0, 0%, 100%, .08)'}} className='transition-transform duration-500 ease-in-out transform hover:scale-105 rounded-lg text-white space-y-2 py-7 px-6 shadow'>
@@ -11,12 +10,12 @@ export const ServiceCard = ({...props}) => {
                 src={props.image}
                 width={500}
                 height={500}
-                alt="Artist Image"
+                alt={`${props.title} image`}
                 style={{objectFit: "contain"}}
             />
-          {/* <img className='w-1/4 m-auto' src={props.image} alt="Service image" /> */}
           </div>
-          <h2 className='text-lg font-bold'>{props.title}</h2>
+
+          <h2 className='text-lg font-bold capitalize'>{props.title}</h2>
           <p className='text-[#b9b6b6]'>
           {props.description}
           {props.duration}
@@ -35,10 +34,12 @@ export const ServiceCard = ({...props}) => {
                 src={props.img}
                 width={500}
                 height={500}
-                alt="Service Image"
+                alt={`${props.title} image`}
+                quality={90}
+                priority={true}
                 style={{objectFit: "contain"}}
             />
-          {/* <img className='w-1/3 ' src={props.img} alt="service image" /> */}
+
           </div>
           <h2 className='text-lg font-bold capitalize'>{props.title}</h2>
           <p className='text-[#b9b6b6]'>

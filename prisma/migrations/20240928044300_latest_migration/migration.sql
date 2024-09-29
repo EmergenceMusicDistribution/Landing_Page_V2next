@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "NewArtist" ALTER COLUMN "age" SET DATA TYPE TEXT;

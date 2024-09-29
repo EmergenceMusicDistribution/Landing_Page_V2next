@@ -5,7 +5,7 @@ import localImg from '../images/bg.png'
 
 const HeroSection = () => {
 
-  const [isLoading, setLoading] = useState(true);
+  // const [isLoading, setLoading] = useState(true);
   return (
     <div style={{background:'linear-gradient(90deg, #382d50, #3a2d50 57%, #7a2e44)'}} className="flex sm:flex-col items-center md:flex-col px-20  pt-5 sm:px-2 text-white sm:gap-4 md:gap-4 bg-slate-950">
 
@@ -18,7 +18,7 @@ const HeroSection = () => {
     <div className='space-x-4 sm:space-x-0 py-3 sm:py-0 sm:flex sm:flex-col md:flex justify-center  items-center gap-5 '>
     <Link href={'/new-artist'}  className='bg-gradient-to-r from-[#6c54ad] to-[#f04762] sm:w-fit hover:bg-blue-700 shadow-lg sm:px-5 sm:py-3 px-10 py-5 font-bold hover:text-blue-500 rounded-full uppercase text-xl'>new artist</Link>
     {/* <button  className='bg-gradient-to-r from-[#6c54ad] to-[#f04762] sm:w-fit hover:bg-blue-700 shadow-lg sm:px-5 sm:py-2 px-10 py-4 font-bold hover:text-blue-500 rounded-full uppercase text-xl'>{t('newArtist')}</button> */}
-    <Link href={'/new-artist'}   className='bg-teal-600 sm:w-fit hover:bg-teal-700 shadow-lg px-10 py-4 sm:px-5 sm:py-3 font-bold rounded-full uppercase text-xl'>EMD Artist</Link>
+    <Link href={'/emd-artist'}   className='bg-teal-600 sm:w-fit hover:bg-teal-700 shadow-lg px-10 py-4 sm:px-5 sm:py-3 font-bold rounded-full uppercase text-xl'>EMD Artist</Link>
     </div> 
 
 <div className='space-y-5 sm:text-center md:text-center md:pb-10'>
@@ -48,14 +48,12 @@ const HeroSection = () => {
 <div className='flex-1'>
 <Image
       src={localImg}
-      // width={1000}
-      // height={1000}
       alt="Hero Image"
       sizes="(max-width: 768px) 100vw, 33vw"
       quality={90}
       priority={true}
-      onLoadingComplete={() => setLoading(false)}
-      className={`hero-image ${isLoading ? 'loading' : 'loaded'}`}
+      // onLoadingComplete={() => setLoading(false)}
+      className={`hero-image `}
       // loading="lazy"
       // placeholder="blur"
       // style={{objectFit: "fill"}}

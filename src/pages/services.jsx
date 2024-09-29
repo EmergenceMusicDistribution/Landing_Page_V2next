@@ -21,7 +21,7 @@ const services = () => {
 
            {
               title: 'marketing campaign', 
-              subList:['marketing campaign','social media ads','youtube ads', '*influencer',]
+              subList:['marketing campaign','social media ads','youtube ads', 'influencer',]
            },
             {
               title : 'Email Promo (Playlist Curator, Music Blog)'
@@ -45,7 +45,7 @@ const services = () => {
  
               {
                  title: 'marketing campaign', 
-                 subList:['marketing campaign','social media ads','youtube ads', '*influencer',]
+                 subList:['marketing campaign','social media ads','youtube ads', 'influencer',]
               },
                {
                  title : 'Email Promo (Playlist Curator, Music Blog)',

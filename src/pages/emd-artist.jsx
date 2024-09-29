@@ -4,19 +4,49 @@ import Image from 'next/image';
 import Link from 'next/link';
 import siteLogo from '../images/sitelogo.svg'
 import { useRouter } from 'next/router'
+import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const EmdArtist = () => {
   const router = useRouter()
-    const onSubmit = (data) => {
-        console.log('Emd Artist Data:', data);
-      };
+  const [isLoading, setIsLoading] = useState(false)
+
+  const onSubmit = (data) => {
+
+    const postData = async()=>{
+      setIsLoading(true)
+        try {
+          const response = await fetch('/api/emd-artist', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          })
+          const result = await response.json();
+            console.log(result)
+          if (response.ok) {
+            // console.log('New artist created:', result)
+            setIsLoading(false)
+            window.location.href = 'https://calendly.com/emergencemusicdistribution/30min?month=2024-09';
+          } else {
+          setIsLoading(false)
+          toast.error(result.error)
+          }
+        } catch (error) {
+          setIsLoading(false)
+          console.log(error)
+          toast.error("An unexpected Error Occured")
+          // Show error message
+        }
+      }
+      postData()
+    };
 
       const fields = [
         { name: 'firstName', label: 'First Name', type: 'text' },
         { name: 'lastName', label: 'Last Name', type: 'text' },
         { name: 'location', label: 'Location', type: 'text' },
         { name: 'email', label: 'Email', type: 'email' },
-        { name: 'phoneNumber', label: 'Phone Number', type: 'number' },
+        { name: 'phoneNumber', label: 'Phone Number', type: 'text' },
         { name: 'artistName', label: 'Artist Name / Label Name / Music Group Name', type: 'text' },
         { name: 'musicGenre', label: 'Music Genre', type: 'text' },
         { name: 'spotifyLink', label: 'Spotify Page Link', type: 'text' },
@@ -33,7 +63,7 @@ const EmdArtist = () => {
     <h3 className='text-lg text-white'>Please fill the form with your information!</h3>
 
     <div className='pb-8'>
-     <ReusableForm onSubmit={onSubmit} schema={emdArtistSchema} fields={fields} />
+     <ReusableForm onSubmit={onSubmit} isLoading={isLoading} schema={emdArtistSchema} fields={fields} />
    </div>
        
 </div>

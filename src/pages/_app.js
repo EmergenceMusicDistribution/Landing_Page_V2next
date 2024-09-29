@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Layout from "@/components/layout/RootLayout";
 import "@/styles/globals.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App({ Component, pageProps }) {
   const globalStructuredData = {
@@ -41,6 +43,17 @@ export default function App({ Component, pageProps }) {
       </Head>
   <Layout>
     <Component {...pageProps} />
+    <ToastContainer
+       position="top-right"
+       autoClose={3000}
+       hideProgressBar={false}
+       newestOnTop={true}
+      //  closeOnClick
+       rtl={false}
+       pauseOnFocusLoss={false}
+       draggable={true}
+       pauseOnHover={true}
+    />
   </Layout>
     </>
   )
