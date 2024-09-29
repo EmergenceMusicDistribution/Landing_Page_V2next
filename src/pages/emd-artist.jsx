@@ -16,7 +16,7 @@ const EmdArtist = () => {
     const postData = async()=>{
       setIsLoading(true)
         try {
-          const response = await fetch('/api/emd-artist', {
+          const response = await fetch('https://emergencemusiclandingv2.vercel.app/api/emd-artist', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -24,7 +24,6 @@ const EmdArtist = () => {
           const result = await response.json();
             console.log(result)
           if (response.ok) {
-            // console.log('New artist created:', result)
             setIsLoading(false)
             window.location.href = 'https://calendly.com/emergencemusicdistribution/30min?month=2024-09';
           } else {
