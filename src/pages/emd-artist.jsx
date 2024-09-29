@@ -10,13 +10,13 @@ import { toast } from 'react-toastify';
 const EmdArtist = () => {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
-
+  // console.log(process.env.NEXT_PUBLIC_API_URL)
   const onSubmit = (data) => {
 
     const postData = async()=>{
       setIsLoading(true)
         try {
-          const response = await fetch('https://emergencemusiclandingv2.vercel.app/api/emd-artist', {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/emd-artist`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
