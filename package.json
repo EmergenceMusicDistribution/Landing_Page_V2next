@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
-    "sitemap": "next-sitemap",
-    "postinstall": "prisma generate"
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
