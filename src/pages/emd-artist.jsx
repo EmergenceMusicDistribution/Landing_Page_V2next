@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 const EmdArtist = () => {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
-  // console.log(process.env.NEXT_PUBLIC_API_URL)
+  console.log(process.env.NEXT_PUBLIC_API_URL)
   const onSubmit = (data) => {
 
     const postData = async()=>{
